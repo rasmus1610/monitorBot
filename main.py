@@ -27,23 +27,23 @@ def job():
             failures.append(item)
 
     if len(successes) > 0:
-        print "=====SUCCESS====="
+        print("=====SUCCESS=====")
 
         for item in successes:
-            print "at '%s' everything is ok \n" % item[0]
+            print("at {} everything is ok \n".format(item[0]))
 
     if len(failures) > 0:
-        print "=====Failure====="
+        print("=====Failure=====")
         for item in failures:
-            print "at '%s' the phrase '%s' is not found \n" % item
+            print("at '{}' the phrase '{}' is not found \n".format(item[0], item[1]))
     else:
-        print "=====NO FAILURES====="
+        print("=====NO FAILURES=====")
 
 schedule.every(1).hours.do(job)
 
 if __name__ == "__main__":
     job()
-    print "=====MONITORING STARTED====="
+    print("=====MONITORING STARTED=====")
     while True:
         schedule.run_pending()
         time.sleep(1)
