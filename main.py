@@ -42,6 +42,7 @@ def job():
 schedule.every(12).hours.do(job)
 
 if __name__ == "__main__":
+    print "=====MONITORING STARTED====="
     while True:
         schedule.run_pending()
         time.sleep(1)
