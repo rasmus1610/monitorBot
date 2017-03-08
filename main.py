@@ -39,7 +39,7 @@ def job():
     else:
         print "=====NO FAILURES====="
 
-schedule.every(12).hours.do(job)
+schedule.every(1).hours.do(job)
 
 if __name__ == "__main__":
     print "=====MONITORING STARTED====="
