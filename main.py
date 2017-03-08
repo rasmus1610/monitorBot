@@ -4,10 +4,10 @@ import time
 import sendmail
 
 urls = [
-    ("http://mariusvach.de", "grubert"),
-    ("http://dr-grubert.de", "vach"),
-    ("http://zabd.de", "vach"),
-    ("http://physiotherapie-quante-benning.de", "vach")
+    ("http://mariusvach.de/", "grubert"),
+    ("http://www.dr-grubert.de/", "vach"),
+    ("http://www.zahnarzt-bernhard-datteln.de/", "vach"),
+    ("http://physiotherapie-quante-benning.de/", "vach")
 ]
 
 successes = []
@@ -42,6 +42,7 @@ def job():
 schedule.every(1).hours.do(job)
 
 if __name__ == "__main__":
+    job()
     print "=====MONITORING STARTED====="
     while True:
         schedule.run_pending()
