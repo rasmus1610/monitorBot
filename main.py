@@ -10,13 +10,14 @@ urls = [
     ("http://physiotherapie-quante-benning.de/", "vach")
 ]
 
-successes = []
-failures = []
 
 #1. make request to url
 
 def job():
 
+    successes = []
+    failures = []
+    
     for item in urls:
         r = requests.get(item[0])
 
